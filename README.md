@@ -1,8 +1,50 @@
-# React + Vite
+## 🛠️ Cara Menjalankan Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### **1. Clone Repository**
+Clone repository ini ke komputer lokal:
+```bash
+git clone git@github.com:rennnotsepuh/rennnotsepuh.github.io.git
+```
+2. Pindah ke Folder Project
 
-Currently, two official plugins are available:
+Masuk ke direktori project:
+```bash
+cd rennnotsepuh.github.io
+```
+3. Install Dependencies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Install semua dependensi yang dibutuhkan dengan menjalankan:
+```bash
+npm install
+```
+4. Jalankan Development Server
+
+Untuk menjalankan project dalam mode pengembangan:
+```bash
+npm run dev
+```
+Server akan berjalan di http://localhost:5173.
+
+5. Build untuk Produksi
+
+Untuk membuat build produksi:
+```bash
+npm run build
+```
+Hasil build akan berada di folder dist/.
+
+6. Preview Build
+
+Untuk melihat hasil build produksi:
+```bash
+npm run preview
+```
+
+---
+
+🔗 Live Demo
+
+Kamu bisa mengakses website ini secara langsung di: rennnotsepuh.github.io
+
+
+---
