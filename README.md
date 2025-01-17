@@ -41,10 +41,3 @@ npm run preview
 ```
 
 ---
-
-🔗 Live Demo
-
-Kamu bisa mengakses website ini secara langsung di: rennnotsepuh.github.io
-
-
----
