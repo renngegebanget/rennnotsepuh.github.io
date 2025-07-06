@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { HiMenu } from 'react-icons/hi' // Impor ikon HiMenu dari react-icons/hi
 
 const Navbar = () => {
   const [show, setShow] = useState(false)
@@ -13,12 +14,12 @@ const Navbar = () => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 5) {
         setScroll(true)
-      setShow(false)
+        setShow(false)
       } else {
         setScroll(false)
       }
     })
-  })
+  }, []) // Tambahkan dependency array kosong untuk memastikan useEffect hanya berjalan sekali
 
   const activeScroll = scroll ? 'py-6 bg-white shadow' : 'py-4'
 
@@ -34,12 +35,17 @@ const Navbar = () => {
           >
             <li>
               <a href='#home' className='font-medium opacity-75'>
-                Beranda
+                Home
               </a>
             </li>
             <li>
               <a href='#about' className='font-medium opacity-75'>
-                Tentang
+                About
+              </a>
+            </li>
+                        <li>
+              <a href='#skills' className='font-medium opacity-75'>
+                Skills
               </a>
             </li>
             <li>
@@ -49,16 +55,10 @@ const Navbar = () => {
             </li>
           </ul>
           <div className='social flex items-center gap-2'>
-            <a
-              href='#social'
-              className='bg-teal-600 px-5 py-2 rounded-full text-white font-bold hover:bg-teal-700 transition-all'
-            >
+            <a href='#social' className='bg-teal-600 px-5 py-2 rounded-full text-white font-bold hover:bg-teal-700 transition-all'>
               Social Media
             </a>
-            <i
-              className='ri-menu-3-line text-3xl md:hidden block'
-              onClick={handleClick}
-            ></i>
+            <HiMenu className='text-3xl md:hidden block' onClick={handleClick} />
           </div>
         </div>
       </div>

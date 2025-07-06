@@ -1,25 +1,11 @@
-import React from 'react'
-import rennLogo from '/jagadrenata.png'
+import ProjectCard from '../components/ProjectCard'
+import { datas } from '../data'
 import rennHome from '/developer-activity.png'
 import rennAbout from '/about.png'
-import ProjectCard from '../components/ProjectCard'
 
 const HomePage = () => {
-  const projects = [
-    {
-      title: 'Ocoffe',
-      description: 'Proyek awal menggunakan React dan React Bootstrap.',
-      image: rennLogo, //400×300
-      link: 'https://ocoffe.vercel.app',
-    },
-    {
-      title: 'Portfolio Website',
-      description: 'Website portofolio dengan React dan tailwind css.',
-      image: rennLogo, //400×300
-      link: 'https://renn.biz.id',
-    },
-  ]
-
+  const projects = datas.projects
+  const skills = datas.skills
   return (
     <div className='Homepage pb-10'>
       <div className='container mx-auto px-4'>
@@ -31,11 +17,11 @@ const HomePage = () => {
               <span className='text-teal-600'> Front-End Developer</span>
             </h1>
             <p className='font-base/8 mb-7'>
-              Halo, saya Jagad Renata, desainer dan pengembang web berusia 14 tahun dari Yogyakarta. Saya memiliki keahlian di bidang front-end dan back-end development, serta minat dalam desain dan
-              teknologi.
+              Hello, I'm Jagad Renata, a 14-year-old web designer and developer from Yogyakarta. I have expertise in front-end and back-end development, as well as an interest in design and
+              technology.
             </p>
-            <a href='#tentang' className='bg-teal-600 hover:bg-teal-500 transition-all py-2 px-4 text-white shadow rounded-full'>
-              tentang
+            <a href='#about' className='bg-teal-600 hover:bg-teal-500 transition-all py-2 px-4 text-white shadow rounded-full'>
+              About
             </a>
           </div>
           <div className='box'>
@@ -50,9 +36,9 @@ const HomePage = () => {
           <div className='box'>
             <h1 className='lg:text-5xl/tight text-3xl font-bold mb-7'>I'm Jagad Renata</h1>
             <p className='font-base/8 mb-7'>
-              Halo, saya Jagad Renata, seorang desainer dan pengembang web muda berusia 14 tahun, saya tinggal di Yogyakarta. Saya memiliki minat besar dalam dunia desain dan pengembangan perangkat
-              lunak. Hobi saya jalan-jalan dan ngoding, dengan keahlian dalam front-end dan back-end development. Saya berkomitmen untuk terus belajar dan mengembangkan keterampilan saya untuk
-              menciptakan solusi digital yang inovatif dan bermanfaat.
+              Hello, I'm Jagad Renata, a young 14-year-old web designer and developer, living in Yogyakarta. I have a great interest in the world of design and software development. My hobbies are
+              traveling and coding, with expertise in front-end and back-end development. I am committed to continuously learning and improving my skills to create innovative and useful digital
+              solutions.
             </p>
             <hr />
             <div className='mt-3 flex gap-2'>
@@ -66,8 +52,20 @@ const HomePage = () => {
           </div>
         </div>
 
+        <div className='skills p-4 lg:mt-36 mt-20' id='skills'>
+          <h1 className='text-3xl font-bold text-gray-800 text-center mb-6'>My Skills</h1>
+          <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6'>
+            {skills.map((skill, index) => (
+              <div key={index} className='flex flex-col items-center'>
+                {skill.icon}
+                <p className='mt-2 font-medium text-gray-700'>{skill.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className='projects p-4 lg:mt-36 mt-20' id='projects'>
-          <h1 className='text-3xl font-bold text-gray-800 text-center mb-6'>Proyek Saya</h1>
+          <h1 className='text-3xl font-bold text-gray-800 text-center mb-6'>My Projects</h1>
           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'>
             {projects.map((project, index) => (
               <ProjectCard key={index} title={project.title} description={project.description} image={project.image} link={project.link} />

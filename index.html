@@ -4,33 +4,33 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/jagadrenata.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jagad Renata | Portofolio</title>
+    <title>Jagad Renata | Portfolio</title>
 
-    <!-- Meta tag SEO -->
+    <!-- SEO Meta Tags -->
     <meta
       name="title"
-      content="Jagad Renata - Front-End Developer Muda di Yogyakarta"
+      content="Jagad Renata - Young Front-End Developer in Yogyakarta"
     />
     <meta
       name="description"
-      content="Halo, saya Jagad Renata, Front-End Developer berusia 14 tahun dari Yogyakarta. Saya fokus pada pengembangan website modern menggunakan React dan desain UI/UX yang menarik dan fungsional. Dengan pengetahuan dasar backend, saya menggabungkan kreativitas dan teknologi untuk memberikan solusi digital yang efektif."
+      content="Hello, I'm Jagad Renata, a 14-year-old Front-End Developer from Yogyakarta. I focus on building modern websites using React and creating engaging, functional UI/UX designs. With basic backend knowledge, I combine creativity and technology to deliver effective digital solutions."
     />
     <meta
       name="keywords"
-      content="Jagad Renata, Rennnotsepuh, Xio Dev, renn, Front-End Developer, React, UI/UX Designer, pengembangan website, desain grafis, pengembangan backend, solusi digital, pemrograman, Yogyakarta"
+      content="Jagad Renata, Rennnotsepuh, Xio Dev, renn, Front-End Developer, React, UI/UX Designer, website development, graphic design, backend development, digital solutions, programming, Yogyakarta"
     />
     <meta name="author" content="Jagad Renata" />
     <meta name="robots" content="index, follow" />
 
-    <!-- Meta tag media sosial -->
-    <!-- Open Graph untuk Facebook -->
+    <!-- Social Media Meta Tags -->
+    <!-- Open Graph for Facebook -->
     <meta
       property="og:title"
-      content="Jagad Renata - Penyedia Layanan Digital Profesional"
+      content="Jagad Renata - Professional Digital Services Provider"
     />
     <meta
       property="og:description"
-      content="Jagad Renata menyediakan berbagai layanan digital, termasuk pengembangan website, desain UI/UX, dan solusi teknologi untuk bisnis Anda."
+      content="Jagad Renata offers a range of digital services, including website development, UI/UX design, and technology solutions for your business."
     />
     <meta property="og:image" content="https://renn.biz.id/jagadrenata.png" />
     <meta property="og:url" content="https://renn.biz.id" />
@@ -40,11 +40,11 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Jagad Renata - Penyedia Layanan Digital Profesional"
+      content="Jagad Renata - Professional Digital Services Provider"
     />
     <meta
       name="twitter:description"
-      content="Jagad Renata menyediakan berbagai layanan digital, termasuk pengembangan website, desain UI/UX, dan solusi teknologi untuk bisnis Anda."
+      content="Jagad Renata offers a range of digital services, including website development, UI/UX design, and technology solutions for your business."
     />
     <meta name="twitter:image" content="https://renn.biz.id/jagadrenata.png" />
     <!-- <meta name="twitter:site" content="@renn_biz_id" /> -->
@@ -58,5 +58,17 @@
   <body class="bg-white-200" id="home">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    </body>
+    <script>
+      const isDev = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+
+  if (isDev) {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/eruda';
+    document.body.appendChild(script);
+    script.onload = () => {
+      eruda.init();
+    };
+  }
+    </script>
+  </body>
 </html>
